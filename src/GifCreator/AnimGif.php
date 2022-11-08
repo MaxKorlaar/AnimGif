@@ -160,7 +160,7 @@ class AnimGif
 
 		$i = 0;
 		foreach ($frames as $frame) {
-			if (is_resource($frame)) { // in-memory image resource (hopefully)
+			if (is_resource($frame) || $frame instanceof \GdImage) { // in-memory image resource (hopefully)
 
 				$resourceImg = $frame;
 
